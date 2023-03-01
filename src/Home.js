@@ -9,11 +9,11 @@ function Home() {
                 <tbody>
                     <tr>
                         <td>
-                            <h1>The Dos Equis Man</h1>
-                            <p>The Most Interesting Man In The World</p>
+                            <h1>Robert</h1>
+                            <p>Tagline</p>
                         </td>
                         <td>
-                            
+                            <img src="https://parade.com/.image/c_limit%2Ccs_srgb%2Cq_auto:good%2Cw_700/MTkwNTc4ODA5NzQwMDc2MTU3/jonathan-goldsmith-dos-equiis-interesting-ftr.webp" alt="MIMITW" />
                         </td>
                     </tr>
                 </tbody>
