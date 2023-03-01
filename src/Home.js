@@ -4,7 +4,6 @@ import Table from "react-bootstrap/Table";
 function Home() {
     return (
         <>
-
             <Table>
                 <tbody>
                     <tr>
