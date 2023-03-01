@@ -1,28 +1,23 @@
 import React from "react";
 import ListGroup from "react-bootstrap/ListGroup";
-import './data/jobs.json';
+import jobs from "./data/jobs";
 
 
-function Jobs(props) {
-    let jobs = jobs.json;
-    console.log(jobs);
-
-    // function jobs() {
-    //     if (props.jobs === null) return
-    //     return props.jobs.map((jobs) =>
-    //     <ListGroup.Item key={jobs.id}>
-    //         {jobs()}
-    //     </ListGroup.Item>
-    // )}
+function Jobs() {
+    function listJobs() {
+        return jobs.map((jobs) =>
+        <ListGroup.Item key={jobs.id}>
+            {jobs.title} | {jobs.company}
+        </ListGroup.Item>
+    )}
 
     return (
-        jobs
-        // <>
-        //     <h1>Jobs</h1>
-        //     <ListGroup className="w-75">
-        //         {jobs()}
-        //     </ListGroup>
-        // </>
+        <>
+            <h1>Jobs</h1>
+            <ListGroup className="w-75">
+                {listJobs()}
+            </ListGroup>
+        </>
     )
 }
 
