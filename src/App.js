@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes, Link } from 'react-router-dom';
 import Home from './Home';
 import About from './About';
 import Jobs from './Jobs';
+import JobDetail from './JobDetail';
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav"
 import Navbar from "react-bootstrap/Navbar";
@@ -24,7 +25,9 @@ function App() {
       <Routes>
         <Route path="/" element={ <Home /> } />
         <Route path="about" element={ <About /> } />
-        <Route path="Jobs" element={ <Jobs /> } />
+        <Route path="Jobs" element={ <Jobs /> } >
+          <Route path=":Jobtitle" element={<JobDetail />} />
+        </Route>
       </Routes>
     </BrowserRouter>
     </div>
