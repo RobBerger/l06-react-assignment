@@ -3,7 +3,10 @@ import { useParams } from 'react-router-dom';
 import jobs from './data/jobs';
 
 function JobDetail() {
-    let job = jobs[0]
+    let params = useParams();
+    let id = params.jobid;
+
+    let job = jobs.find(j => j.id.toString() === id.toString());
 
     return (
         <Card className='align-self-start w-100'>

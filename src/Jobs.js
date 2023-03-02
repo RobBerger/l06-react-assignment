@@ -3,14 +3,14 @@ import Table from "react-bootstrap/Table";
 import ListGroup from "react-bootstrap/ListGroup";
 import jobs from "./data/jobs";
 import JobDetail from "./JobDetail";
-import { Outlet } from "react-router-dom";
+import { Outlet, Link } from "react-router-dom";
 
 
 function Jobs() {
     function listJobs() {
         return jobs.map((job) =>
-        <ListGroup.Item key={job.title}>
-            {job.title} | {job.company}
+        <ListGroup.Item key={job.id}>
+           <Link to={ "/jobs/" + job.id }>{job.title}</Link> | {job.company}
         </ListGroup.Item>
     )}
 
