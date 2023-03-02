@@ -26,6 +26,7 @@ function App() {
         <Route path="/" element={ <Home /> } />
         <Route path="about" element={ <About /> } />
         <Route path="Jobs" element={ <Jobs /> } >
+          <Route index element={<p>Select a Job for more details</p>} />
           <Route path=":jobid" element={<JobDetail />} />
         </Route>
       </Routes>
